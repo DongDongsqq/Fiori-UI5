@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>면적 구하는 함수 선언 및 호출</title>
+  </head>
+  <body>
+    <h2>면적 계산기</h2>
+    <p>가로와 세로를 입력하세요.</p>
+
+    <label for="length">가로:</label>
+    <input type="number" id="length" placeholder="가로를 입력하세요." />
+    <p></p>
+    <label for="length">세로:</label>
+    <input type="number" id="width" placeholder="세로를 입력하세요." />
+    <!-- 버튼 클릭 시 calculate 함수 호출-->
+    <button onclick="calculate()">계산</button>
+
+    <!--자바스크립트 파일 연결-->
+    <script src="exercise_d02_04.js"></script>
+
+    <p></p>
+    <label for="result">결과:</label>
+    <!-- 결과 출력, default 값으로 없음 지정 -->
+    <output id="result">없음</output>
+  </body>
+</html>

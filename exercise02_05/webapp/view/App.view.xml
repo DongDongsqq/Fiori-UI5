@@ -1,0 +1,5 @@
+<mvc:View controllerName="sync.d02.exercise0205.controller.App" displayBlock="true" 
+	xmlns:mvc="sap.ui.core.mvc" 
+	xmlns="sap.m">
+	<App id="app"></App>
+</mvc:View>

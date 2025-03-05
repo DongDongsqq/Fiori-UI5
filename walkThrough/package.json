@@ -1,0 +1,13 @@
+{
+  "name": "ui5.walkthrough",
+  "version": "1.0.0",
+  "description": "The UI5 walkthrough application",
+  "scripts": {
+    "start": "ui5 serve -o index.html"
+  },
+  "devDependencies": {
+    "@prettier/plugin-xml": "^3.4.1",
+    "@ui5/cli": "^4.0.13",
+    "prettier": "^3.5.3"
+  }
+}

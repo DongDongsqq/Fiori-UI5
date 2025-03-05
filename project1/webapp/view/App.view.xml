@@ -1,0 +1,9 @@
+<mvc:View controllerName="syncd02.project1.controller.App" displayBlock="true" 
+	xmlns:mvc="sap.ui.core.mvc" 
+	xmlns="sap.m">
+	<App id="app">
+		<pages>
+			<mvc:XMLView id="view1" viewName="syncd02.project1.view.View"/>
+		</pages>
+	</App>
+</mvc:View>
