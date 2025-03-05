@@ -1,0 +1,14 @@
+<mvc:View controllerName="sync.d02.numbercalc.controller.View" 
+	xmlns:mvc="sap.ui.core.mvc" 
+	xmlns="sap.m">
+	<Page id="page" title="{i18n>title}">
+		<content>
+			<Label id="labelId1" text="첫번째 숫자" required="true"></Label>
+			<Input id="inputId1" value="{/inputValue1}"></Input>
+			<Label id="labelId2" text="두번째 숫자" required="true"></Label>
+			<Input id="inputId2" value="{/inputValue2}"></Input>
+			<Label id="LabelId3" text="연산 선택"></Label>
+			<List id="ListId1" items="{path= '/operator'}"></List>
+		</content>
+	</Page>
+</mvc:View>
