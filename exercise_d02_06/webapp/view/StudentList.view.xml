@@ -1,0 +1,16 @@
+<mvc:View controllerName="sync.d02.exercised0206.controller.StudentList"
+    xmlns="sap.m" 
+    xmlns:core="sap.ui.core"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:formatter="sync.d02.exercised0206.model.formatter">
+    <List headerText="{i18n>StudentListTitle}" class="sapUiResponsiveMargin" width="80%" items="{student>/Students}">
+        <items>
+            <ObjectListItem
+                title="{student>name}"
+                icon="{path: 'student>gender', formatter: 'sync.d02.exercised0206.model.formatter.statusIcon'}"
+                number="{student>birthdate}"/>
+        </items>
+    </List>
+</mvc:View>
+
+<!-- icon="{path: 'student>gender', formatter: 'formatter.statusIcon'}" -->

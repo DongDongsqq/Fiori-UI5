@@ -5,9 +5,6 @@ sap.ui.define(
 
     return Controller.extend("walkThrough.controller.InvoiceList", {
       onInit() {
-        const oViewModel = new JSONModel({
-          currency: "EUR",
-        });
         this.getView().setModel(oViewModel, "view");
       },
     });
