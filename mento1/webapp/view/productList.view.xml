@@ -1,0 +1,41 @@
+<mvc:View
+xmlns="sap.m"
+xmlns:core="sap.ui.core"
+xmlns:mvc="sap.ui.core.mvc">
+<List headerText="{i18n>title}" class="sapUiResponsiveMargin" width="auto" items="{product>/products}">
+    <items>
+        <ObjectListItem
+        core:require="{
+            Formatter: 'syncd02/mento1/model/formatter'}"
+            title="{product>name}"
+            icon="{product>icon}"
+            number="{
+                parts: [{path: 'product>price'}, {path: 'product>currency'}],
+                formatter: 'Formatter.formatPriceWithCurrency'}"
+			numberState= "{= ${product>stock} > 0 ? 'Success' : 'Error' }">
+<attributes>
+    <ObjectAttribute text = "{product>id}"></ObjectAttribute>
+    </attributes>
+<firstStatus>
+    <ObjectStatus
+        text="{
+            path: 'product>discount',
+            formatter: 'Formatter.formatDiscount'}"
+        >
+    </ObjectStatus>
+</firstStatus>
+<secondStatus>
+    <ObjectStatus
+        text="{
+            parts: [{path: 'product>stock'}, {path: 'product>unit'}],
+            formatter: 'Formatter.formatStockUnit'}"/>
+</secondStatus>
+<markers>
+<ObjectMarker
+type="{= ${product>rating} >= 4.0 ? 'Flagged' : 'Favorite'}"/>
+</markers>
+        </ObjectListItem>
+    </items>
+</List>
+
+</mvc:View>
