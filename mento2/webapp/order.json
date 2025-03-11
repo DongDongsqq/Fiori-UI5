@@ -1,0 +1,70 @@
+{
+    "order": [
+      {
+        "orderId": 101,
+        "product": "노트북",
+        "quantity": 2,
+        "price": 1500000,
+        "status": "배송중",
+        "date": {
+          "order": "2024-03-01",
+          "delivery": "2024-03-05"
+        }
+      },
+      {
+        "orderId": 102,
+        "product": "키보드",
+        "quantity": 34,
+        "price": 50000,
+        "status": "배송완료",
+        "date": {
+          "order": "2024-02-20",
+          "delivery": "2024-02-22"
+        }
+      },
+      {
+        "orderId": 103,
+        "product": "모니터",
+        "quantity": 35,
+        "price": 300000,
+        "status": "주문접수",
+        "date": {
+          "order": "2024-03-03",
+          "delivery": ""
+        }
+      },
+      {
+        "orderId": 104,
+        "product": "멀티탭",
+        "quantity": 1,
+        "price": 250000,
+        "status": "주문접수",
+        "date": {
+          "order": "2024-03-11",
+          "delivery": ""
+        }
+      },
+      {
+        "orderId": 105,
+        "product": "마우스",
+        "quantity": 10,
+        "price": 80000,
+        "status": "배송중",
+        "date": {
+          "order": "2024-02-17",
+          "delivery": ""
+        }
+      },
+      {
+        "orderId": 106,
+        "product": "노트북 거치대",
+        "quantity": 80,
+        "price": 10000,
+        "status": "배송완료",
+        "date": {
+          "order": "2024-02-03",
+          "delivery": "2024-02-15"
+        }
+      }
+    ]
+  }

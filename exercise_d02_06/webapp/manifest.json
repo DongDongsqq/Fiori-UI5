@@ -87,8 +87,6 @@
       ],
       "targets": {
         "TargetView": {
-          "id": "View",
-          "name": "StudentList"
         }
       }
     },

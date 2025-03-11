@@ -1,0 +1,81 @@
+<mvc:View controllerName="exercised0207.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+      <Page title="Carr 데이터">
+<Panel>
+    <FlexBox direction="Column">
+        <Text text='Carrid' />
+        <Input  id = "input_carrid"
+                liveChange="true" 
+                textAlign="Initial" 
+                placeholder="carrid를 입력하세요"
+                width="30%"/>
+        <Text text='Carrname' />
+        <Input  id="input_carrname"
+                liveChange="true" 
+                textAlign="Initial" 
+                placeholder="carrname을 입력하세요"
+                width="30%"/>
+        <Text text='Currcode' />
+        <Input  id = "input_currcode"
+                liveChange="true" 
+                textAlign="Initial" 
+                placeholder="currcode를 입력하세요"
+                width="30%"/>
+        <Text text='Url' />
+        <Input  id = "input_url"
+                liveChange="true" 
+                textAlign="Initial" 
+                placeholder="url을 입력하세요"
+                width="30%"/>
+                </FlexBox>
+    <FlexBox direction="Row">
+        <Button text="Create" 
+                type="Emphasized" 
+                press="onCreate"/>
+        <Button text ="Delete" 
+                type="Emphasized" 
+                press="onDelete">
+        </Button>
+        <Button text="Update"
+                press="onOpenDialog"> </Button>
+    </FlexBox>
+    </Panel>
+
+    <Table id="mTable" items="{/ZCARR_D02Set}" mode="SingleSelectMaster">
+    <columns>
+        <Column>
+            <header>
+                <Label text="Carrid" />
+            </header>
+        </Column>
+        <Column>
+            <header>
+                <Label text="Carrier" />
+            </header>
+        </Column>
+        <Column>
+            <header>
+                <Label text="Currency" />
+            </header>
+        </Column>
+        <Column>
+            <header>
+                <Label text="Website" />
+            </header>
+        </Column>
+    </columns>
+
+    <items>
+        <ColumnListItem>
+            <cells>
+                <Text text="{Carrid}" />
+                <Text text="{Carrname}" />
+                <Text text="{Currcode}" />
+                <Link text="{Url}" />
+            </cells>
+        </ColumnListItem>
+    </items>
+</Table>
+</Page>
+</mvc:View>

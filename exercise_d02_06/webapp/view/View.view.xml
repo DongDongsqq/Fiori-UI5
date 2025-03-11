@@ -1,6 +1,0 @@
-<mvc:View controllerName="sync.d02.exercised0206.controller.View"
-    xmlns:mvc="sap.ui.core.mvc"
-    xmlns="sap.m">
-    <Page id="page" title="{i18n>우리반 학생 정보}">
-    </Page>
-</mvc:View>

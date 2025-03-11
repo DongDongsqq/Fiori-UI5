@@ -2,7 +2,7 @@
     xmlns="sap.m" 
     xmlns:core="sap.ui.core"
     xmlns:mvc="sap.ui.core.mvc"
->    <ScrollContainer width="100%" height="100%" vertical="true">
+>   
         <List headerText="{i18n>StudentListTitle}" class="sapUiResponsiveMargin" width="auto" items="{student>/Students}">
             <items>
                 <ObjectListItem
@@ -25,7 +25,7 @@
                 </ObjectListItem>
             </items>
         </List>
-    </ScrollContainer>
+
 </mvc:View>
 
                                 <!-- {

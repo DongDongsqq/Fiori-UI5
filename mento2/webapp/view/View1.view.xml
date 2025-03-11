@@ -1,0 +1,31 @@
+<mvc:View controllerName="mento2.controller.View1"
+        xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:mvc="sap.ui.core.mvc">
+    <Page>
+    <FlexBox direction="Row" justifyContent="End">
+    <CheckBox text="배송완료"></CheckBox>
+    <Button text="재고 부족" type="Emphasized"></Button>
+    <SearchField placeholder="뭐가 궁금해" liveChange="onFilterOrders" /></FlexBox>
+      
+        <List id="orderList" headerText="제목은 뭐하지" class="sapUiResponsiveMargin" width="auto" items="{order>/order}">
+            <items>
+                <ObjectListItem
+                    intro="{order>orderId}"
+                    title="{order>product}"
+                    number="{order>price}">
+                    <firstStatus>
+                        <ObjectStatus
+                            text="{order>status}"
+                            state="{= ${order>status} === '배송중' || ${order>status} === '주문접수' ? 'Success' : 'Error' }"/>
+                    </firstStatus>
+                    <secondStatus>
+                        <ObjectStatus
+                            text="배송일: {order>date/delivery}"
+                            visible="{= ${order>status} === '배송완료' }"/>
+                    </secondStatus>
+                </ObjectListItem>
+            </items>
+        </List>
+    </Page>
+</mvc:View>
