@@ -5,7 +5,7 @@
     <Page>
     <FlexBox direction="Row" justifyContent="End">
     <CheckBox text="배송완료"></CheckBox>
-    <Button text="재고 부족" type="Emphasized"></Button>
+    <Button text="재고 부족" type="Emphasized" press="onOpenDeliver"></Button>
     <SearchField placeholder="뭐가 궁금해" liveChange="onFilterOrders" /></FlexBox>
       
         <List id="orderList" headerText="제목은 뭐하지" class="sapUiResponsiveMargin" width="auto" items="{order>/order}">
@@ -13,7 +13,8 @@
                 <ObjectListItem
                     intro="{order>orderId}"
                     title="{order>product}"
-                    number="{order>price}">
+                    number="{order>price}"
+                    numberUnit="{/currency}">
                     <firstStatus>
                         <ObjectStatus
                             text="{order>status}"
