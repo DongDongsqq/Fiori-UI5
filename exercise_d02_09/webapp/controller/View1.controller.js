@@ -22,7 +22,7 @@ sap.ui.define([
 
                     // UnitsInStock 기준 오름차순 정렬 후 상위 5개만 추출
                     var aTopFiveProducts = aProducts
-                        .sort((a, b) => a.UnitsInStock - b.UnitsInStock)
+                        .sort((a, b) => b.UnitsInStock - a.UnitsInStock)
                         .slice(0, 5);
 
                     var oJsonModel = new JSONModel({ Product: aTopFiveProducts });
