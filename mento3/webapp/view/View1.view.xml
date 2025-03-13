@@ -1,0 +1,28 @@
+<mvc:View controllerName="mento3.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <IconTabBar
+		id="idIconTabBarNoIcons"
+		class="sapUiResponsiveContentPadding">
+		<items>
+			<IconTabFilter text="OrderList" key="OrderList">
+				<!-- <mvc:XMLView viewName="ex3.mentoringex3.view.OrderList"/> -->
+			</IconTabFilter>
+			<IconTabFilter text="Customer Table" key="CustomerTable">
+				<content>
+                    <!-- <mvc:XMLView viewName="ex3.mentoringex3.view.Table"/> -->
+                </content>
+			</IconTabFilter>
+			<IconTabFilter text="Discount Chart" key="Discount Chart">
+				<content>
+                    <!-- <mvc:XMLView viewName="ex3.mentoringex3.view.LineChart"/> -->
+                </content>
+			</IconTabFilter>
+			<IconTabFilter text="OrderChart" key="OrderChart">
+				    <!-- <mvc:XMLView viewName="ex3.mentoringex3.view.OrderChart"/> -->
+			</IconTabFilter>
+		</items>
+	</IconTabBar>
+    </Page>
+</mvc:View>

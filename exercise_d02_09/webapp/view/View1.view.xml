@@ -6,9 +6,12 @@
     xmlns="sap.m">
     <Page id="page" title="{i18n>title}">
         <content>
-            <viz:VizFrame id="idBarChart" width="100%" height="400px" vizType="line">
+            <viz:VizFrame   id="idBarChart" 
+                            width="100%" 
+                            height="400px" 
+                            vizType="line">
                 <viz:dataset>
-                    <viz.data:FlattenedDataset data="{Product>/Product}">
+                    <viz.data:FlattenedDataset data="{Product>/product}">
                         <viz.data:dimensions>
                             <viz.data:DimensionDefinition name="name" value="{Product>name}"/>
                         </viz.data:dimensions>
