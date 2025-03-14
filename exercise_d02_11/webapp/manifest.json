@@ -1,7 +1,7 @@
 {
     "_version": "1.65.0",
     "sap.app": {
-        "id": "exercised0210",
+        "id": "exercised0211",
         "type": "application",
         "i18n": "i18n/i18n.properties",
         "applicationVersion": {
@@ -13,7 +13,7 @@
         "sourceTemplate": {
             "id": "@sap/generator-fiori:basic",
             "version": "1.16.5",
-            "toolsId": "9b75d4fb-c3dd-472d-8544-663808966090"
+            "toolsId": "91a85579-168a-4f1a-bacc-bd9677442a07"
         }
     },
     "sap.ui": {
@@ -49,7 +49,7 @@
             "i18n": {
                 "type": "sap.ui.model.resource.ResourceModel",
                 "settings": {
-                    "bundleName": "exercised0210.i18n.i18n"
+                    "bundleName": "exercised0211.i18n.i18n"
                 }
             }
         },
@@ -68,40 +68,28 @@
                 "transition": "slide",
                 "type": "View",
                 "viewType": "XML",
-                "path": "exercised0210.view",
+                "path": "exercised0211.view",
                 "async": true,
-                "viewPath": "exercised0210.view"
+                "viewPath": "exercised0211.view"
             },
             "routes": [
                 {
-                    "name": "RouteMain",
+                    "name": "RouteView",
                     "pattern": ":?query:",
                     "target": [
-                        "TargetMain"
-                    ]
-                },
-                {
-                    "name": "RouteDetail",
-                    "pattern": "detail/{key1}/{key2}/{key3}/{key4}",
-                    "target": [
-                        "TargetDetail"
+                        "TargetView"
                     ]
                 }
             ],
             "targets": {
-                "TargetMain": {
-                    "id": "Main",
-                    "name": "Main"
-                },
-                "TargetDetail": {
-                    "viewType": "XML",
-                    "viewId": "Detail",
-                    "viewName": "Detail"
+                "TargetView": {
+                    "id": "View",
+                    "name": "View"
                 }
             }
         },
         "rootView": {
-            "viewName": "exercised0210.view.App",
+            "viewName": "exercised0211.view.App",
             "type": "XML",
             "id": "App"
         }

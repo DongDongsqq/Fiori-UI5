@@ -1,0 +1,65 @@
+<mvc:View controllerName="exercised0211.controller.View"
+	xmlns="sap.ui.table"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:u="sap.ui.unified"
+	xmlns:c="sap.ui.core"
+	xmlns:m="sap.m"
+    height="100%">
+<m:Panel>
+<m:content>
+<m:Text text="조회조건"></m:Text>
+<m:FlexBox>
+<m:Text text="Class:"></m:Text>
+<m:Input id="classInput" value="Class"></m:Input>
+</m:FlexBox>
+</m:content>
+
+</m:Panel>
+
+ <m:Page
+		showHeader="false"
+		enableScrolling="false"
+		class="sapUiContentPadding">
+		<m:content>
+			<Table
+				id="dataTable"
+				rows="{dataModel>/data}"
+				selectionMode="MultiToggle"
+				paste="onPaste"
+				ariaLabelledBy="title">
+				<extension>
+					<m:OverflowToolbar style="Clear">
+						<m:Title id="title" text="Products"/>
+					</m:OverflowToolbar>
+				</extension>
+				<columns>
+					<Column>
+						<m:Label text="이름" />
+						<template>
+							<m:Text text="{dataModel>Name}" wrapping="false" />
+						</template>
+					</Column>
+					<Column>
+						<m:Label text="클래스" />
+						<template>
+							<m:Text text="{dataModel>class}"/>
+						</template>
+					</Column>
+					<Column>
+						<m:Label text="성별" />
+						<template>
+							<m:Label text="{dataModel>gender}" />
+						</template>
+					</Column>
+                    <Column hAlign="Center">
+                    <m:Label text="Details" />
+                    <template>
+                    <m:Button text="Button" press="onDetails">		
+                    </m:Button>
+                    </template>
+                    </Column>
+                </columns>
+			</Table>
+		</m:content>
+	</m:Page>
+</mvc:View>

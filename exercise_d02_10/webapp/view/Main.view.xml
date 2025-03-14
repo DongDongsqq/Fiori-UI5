@@ -1,10 +1,42 @@
 <mvc:View controllerName="exercised0210.controller.Main"
     xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m">
-    <Page id="page" title="{i18n>title}">
-    <content>
+<m:Page xmlns:m="sap.m"
+        xmlns:core="sap.ui.core"
+        title="Main Page">
+  <m:content>
+    <m:Table
+      id="StudentTable"
+      items="{studentModel>/Students}"
+      mode= "SingleSelect">
+      <m:columns>
+        <m:Column>
+          <m:Text text="Number"/>
+        </m:Column>
+        <m:Column>
+          <m:Text text="Name"/>
+        </m:Column>
+        <m:Column>
+          <m:Text text="Gender"/>
+        </m:Column>
+      </m:columns>
+
+      <m:items>
+        <m:ColumnListItem type="Active">
+          <m:cells>
+            <m:Text text="{studentModel>no}"/>
+            <m:Text text="{studentModel>name}"/>
+            <m:Text text="{studentModel>gender}"/>
+          </m:cells>
+        </m:ColumnListItem>
+      </m:items>
+    </m:Table>
+
+    <!-- 상세 페이지로 이동하는 버튼 -->
     <Button text="Detail" press="onGoDetail"></Button>
     <Input id="idInput" width="30%"></Input>
-    </content>
-    </Page>
+  </m:content>
+</m:Page>
+
 </mvc:View>
+

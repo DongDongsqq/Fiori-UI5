@@ -1,11 +1,25 @@
 <mvc:View controllerName="exercised0210.controller.Detail"
     xmlns:mvc="sap.ui.core.mvc"
-    xmlns="sap.m">
-    <Page id="pageDetail" title="{i18n>title}" showNavButton="true" navButtonPress="onGoBack">
+    xmlns="sap.m"
+    xmlns:l="sap.ui.layout"
+    xmlns:f="sap.ui.layout.form">
+  <Page id="pageDetail" title="Student Detail" showNavButton="true" navButtonPress="onGoBack">
     <content>
-    
-    <Text text="Detail Page"></Text>
-    <Button text="Go Back" press="onGoBack"></Button>
+      <VBox class="sapUiSmallMargin">
+        <f:SimpleForm id="StudentForm" title="Student Information" editable="false" layout="ResponsiveGridLayout">
+          <f:content>
+            <Label text="No" />
+            <Text text="{detailModel>/key1}" />
+            <Label text="Name" />
+            <Text text="{detailModel>/key2}" />
+            <Label text="Gender" />
+            <Text text="{detailModel>/key3}" />
+            <Label text="Birthdate" />
+            <Text text="{detailModel>/key4}" />
+          </f:content>
+        </f:SimpleForm>
+      </VBox>
+      <Button text="Go Back" press="onGoBack" />
     </content>
-    </Page>
+  </Page>
 </mvc:View>

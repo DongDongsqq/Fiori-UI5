@@ -1,0 +1,44 @@
+<core:FragmentDefinition xmlns="sap.m"
+    xmlns:core="sap.ui.core">
+    <Dialog id="Detail" title="상세 정보">
+    <content>
+<FlexBox direction="Column">
+    <HBox>
+        <Text text="이름: " />
+        <Text text="{detailModel>/Name}" />
+    </HBox>
+    <HBox>
+        <Text text="클래스: " />
+        <Text text="{detailModel>/class}"></Text>
+    </HBox>
+    <HBox>
+        <Text text="성별: " />
+        <Text text="{detailModel>/gender}"></Text>
+    </HBox>
+    <HBox>
+        <Text text="결과: " />
+        <Text text="10"></Text>
+    </HBox>
+</FlexBox>
+
+
+    </content>
+
+
+        <beginButton>
+            <Button text="OK" press=".onCloseDialog" />
+        </beginButton>
+
+            <!-- <FlexBox direction="Column">
+                <List id="orderList3" headerText="재고 부족 상품" class="sapUiResponsiveMargin" width="auto" items="{order>/order}">
+                    <items>
+                        <ObjectListItem title="({order>orderId}): {order>product}"
+                            number="재고: {order>quantity}"></ObjectListItem>
+                    </items>
+                </List>
+            </FlexBox>
+        </content>
+ -->
+
+    </Dialog>
+</core:FragmentDefinition>
