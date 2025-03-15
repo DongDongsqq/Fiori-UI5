@@ -1,56 +1,63 @@
 {
-  "_version": "1.65.0",
-  "sap.app": {
-    "id": "ui5.walkthrough",
-    "i18n": "i18n/i18n.properties",
-    "title": "{{appTitle}}",
-    "description": "{{appDescription}}",
-    "type": "application",
-    "applicationVersion": {
-      "version": "1.0.0"
-    }
-  },
-  "sap.ui": {
-    "technology": "UI5",
-    "deviceTypes": {
-      "desktop": true,
-      "tablet": true,
-      "phone": true
-    }
-  },
-  "sap.ui5": {
-    "dependencies": {
-      "minUI5Version": "1.108.0",
-      "libs": {
-        "sap.ui.core": {},
-        "sap.m": {}
-      }
-    },
-    "resources": {
-      "css": [
-        {
-          "uri": "css/style.css"
+    "_version": "1.65.0",
+    "sap.app": {
+        "id": "ui5.walkthrough",
+        "i18n": "i18n/i18n.properties",
+        "title": "{{appTitle}}",
+        "description": "{{appDescription}}",
+        "type": "application",
+        "applicationVersion": {
+            "version": "1.0.0"
+        },
+        "sourceTemplate": {
+            "id": "@sap/ux-app-migrator:freestyle",
+            "version": "1.16.5",
+            "toolsId": "85133c48-44af-47d7-af17-19f08d943175"
         }
-      ]
     },
-    "models": {
-      "i18n": {
-        "type": "sap.ui.model.resource.ResourceModel",
-        "settings": {
-          "bundleName": "ui5.walkthrough.i18n.i18n",
-          "supportedLocales": [""],
-          "fallbackLocale": ""
+    "sap.ui": {
+        "technology": "UI5",
+        "deviceTypes": {
+            "desktop": true,
+            "tablet": true,
+            "phone": true
         }
-      },
-      "invoice": {
-        "type": "sap.ui.model.json.JSONModel",
-        "uri": "Invoices.json"
-      }
     },
-    "rootView": {
-      "viewName": "ui5.walkthrough.view.App",
-      "type": "XML",
-      "id": "app"
+    "sap.ui5": {
+        "dependencies": {
+            "minUI5Version": "1.108.0",
+            "libs": {
+                "sap.ui.core": {},
+                "sap.m": {}
+            }
+        },
+        "resources": {
+            "css": [
+                {
+                    "uri": "css/style.css"
+                }
+            ]
+        },
+        "models": {
+            "i18n": {
+                "type": "sap.ui.model.resource.ResourceModel",
+                "settings": {
+                    "bundleName": "ui5.walkthrough.i18n.i18n",
+                    "supportedLocales": [
+                        ""
+                    ],
+                    "fallbackLocale": ""
+                }
+            },
+            "invoice": {
+                "type": "sap.ui.model.json.JSONModel",
+                "uri": "Invoices.json"
+            }
+        },
+        "rootView": {
+            "viewName": "ui5.walkthrough.view.App",
+            "type": "XML",
+            "id": "app"
+        }
     }
-  }
 }

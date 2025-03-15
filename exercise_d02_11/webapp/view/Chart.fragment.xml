@@ -1,0 +1,43 @@
+<core:FragmentDefinition 
+    xmlns:core="sap.ui.core"
+    xmlns="sap.m"
+    xmlns:viz="sap.viz.ui5.controls" 
+    xmlns:layout="sap.ui.layout"
+    xmlns:mvc="sap.ui.core.mvc" 
+    xmlns:viz.feeds="sap.viz.ui5.controls.common.feeds"
+    xmlns:viz.data="sap.viz.ui5.data" 
+    height="100%">
+  <Dialog id="Chart" title="성별 빈도 분석">
+    <content>
+      <!-- VizFrame을 donut 차트 타입으로 설정 -->
+      <viz:VizFrame id="idVizFrame" uiConfig="{applicationSet:'fiori'}"
+                    height="400px" width="600px" vizType="donut">
+        <viz:dataset>
+          <!-- chartModel의 /data 경로에 바인딩 -->
+          <viz.data:FlattenedDataset data="{chartModel>/data}">
+            <viz.data:dimensions>
+              <!-- 각 데이터 객체의 gender 값을 차원으로 사용 -->
+              <viz.data:DimensionDefinition name="Gender" value="{gender}" />
+            </viz.data:dimensions>
+            <viz.data:measures>
+              <!-- 각 데이터 객체의 count 값을 측정 값으로 사용 -->
+              <viz.data:MeasureDefinition name="Count" value="{count}" />
+            </viz.data:measures>
+          </viz.data:FlattenedDataset>
+        </viz:dataset>
+        <viz:feeds>
+          <!-- size 피드에 측정 값(Count) 적용 -->
+          <viz.feeds:FeedItem uid="size" type="Measure" values="Count" />
+          <!-- color 피드에 차원(Gender) 적용 -->
+          <viz.feeds:FeedItem uid="color" type="Dimension" values="Gender" />
+        </viz:feeds>
+        <viz:dependents>
+          <viz:Popover id="idPopOver"></viz:Popover>
+        </viz:dependents>
+      </viz:VizFrame>
+    </content>
+    <beginButton>
+      <Button text="닫기" press=".onCloseDialog" />
+    </beginButton>
+  </Dialog>
+</core:FragmentDefinition>

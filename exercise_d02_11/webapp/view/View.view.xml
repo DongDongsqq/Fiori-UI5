@@ -1,7 +1,6 @@
 <mvc:View controllerName="exercised0211.controller.View"
 	xmlns="sap.ui.table"
 	xmlns:mvc="sap.ui.core.mvc"
-	xmlns:u="sap.ui.unified"
 	xmlns:c="sap.ui.core"
 	xmlns:m="sap.m"
     height="100%">
@@ -10,10 +9,18 @@
 <m:Text text="조회조건"></m:Text>
 <m:FlexBox>
 <m:Text text="Class:"></m:Text>
-<m:Input id="classInput" value="Class"></m:Input>
+<m:Input id="classInput" placeholder="Class" liveChange="onFilterChange"></m:Input>
+<m:Button id="chartButton" text="차트" press="onChart"/>
 </m:FlexBox>
 </m:content>
-
+<m:Select id="genderSelect"
+          forceSelection="true"
+          selectedKey="{dataModel>/selectedGender}"
+          change="onFilterChange">
+		  <c:Item key="전체" text="전체"></c:Item>
+          <c:Item key="남성" text="남성" />
+          <c:Item key="여성" text="여성" />
+      </m:Select>
 </m:Panel>
 
  <m:Page
