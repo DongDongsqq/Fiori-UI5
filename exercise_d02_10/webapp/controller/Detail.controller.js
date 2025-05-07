@@ -17,13 +17,14 @@ sap.ui.define([
             //1. URL 에서 전달된 파라미터 가져오기.
             // var sId = oEvent.getParameter("arguments").key1; //키 지정 
             var oArgu = oEvent.getParameters().arguments; //배열
-
+console.log(oArgu);
             //2. 새로운 JSON 모델 생성하여 ID 값을 저장
             // var oModel = new JSONModel({ key1: sId });
             var oModel = new JSONModel(oArgu);
-
+console.log(oModel);
             //3. 뷰에 "detailModel"로 모델 설정
             this.getView().setModel(oModel, "detailModel"); 
+
         },
 
         onGoBack: function() {

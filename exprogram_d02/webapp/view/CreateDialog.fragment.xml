@@ -1,0 +1,29 @@
+<core:FragmentDefinition xmlns="sap.m"
+    xmlns:core="sap.ui.core">
+    <Dialog id="CreateDialog" title="회원 정보 등록">
+        <content>
+            <FlexBox direction="Column">
+                <Label required="true" text="회원이름"></Label>
+                <Input id="input_name" width="60%" required="true"></Input>
+                <Label required="true" text="생년월일"></Label>
+                <DatePicker id="input_bdate" width="60%" placeholder="YYYY-MM-DD" displayFormat="yyyy-MM-dd" valueFormat="yyyy-MM-dd"></DatePicker>
+                <Label required="true" text="성별"></Label>
+                <Input id="input_gender" required="true" width="80%" placeholder="남/여"></Input>
+                <Label required="true" text="도시"></Label>
+                <Input id="input_city" required="true" width="60%"></Input>
+                <Label required="true" text="국가코드"></Label>
+                <Input id="input_country" required="true" width="40%" placeholder="KR"></Input>
+                <Label required="true" text="전화번호"></Label>
+                <Input id="input_telephone" required="true" width="80%"></Input>
+                <Label required="true" text="E-Mail"></Label>
+                <Input id="input_email" required="true" width="90%"></Input>
+            </FlexBox>
+        </content>
+            <beginButton>
+                <Button type="Emphasized" text="저장" press=".onCreate"/>
+            </beginButton>
+            <endButton>
+                <Button text="취소" type="Reject" press=".onCloseDialog"/>
+            </endButton>
+    </Dialog>
+</core:FragmentDefinition>
