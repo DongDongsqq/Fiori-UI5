@@ -3,7 +3,7 @@
 	xmlns="sap.m">
 	<App id="app">
 		<pages>
-			<mvc:XMLView id="view1" viewName="syncd02.project1.view.View"/>
+			<mvc:XMLView id="view1" viewName="syncd02.project1.view.Main"/>
 		</pages>
 	</App>
 </mvc:View>
